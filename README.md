@@ -1,3 +1,3 @@
-# GraphQL Chat Sample
+# GraphQL Chat Application
 
-Sample application used in the [GraphQL by Example](https://bit.ly/graphql-by-example) course.
+> A simple chat app built with React & GraphQL.
