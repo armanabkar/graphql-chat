@@ -1,8 +1,63 @@
 html {
-  background-color: #b4dcfd;
+  background-color: #fafafa;
 }
 
 button.navbar-item {
-  background-color: #b4dcfd;
+  background-color: #fafafa;
   border: none;
+}
+
+a {
+  color: #50bbd7;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar-start {
+    display: flex;
+  }
+  .navbar-item-mob {
+    padding: 1rem;
+  }
+}
+
+.section {
+  padding-top: 1.5rem;
+}
+
+.box {
+  padding: 1rem;
+}
+
+.card-header-title {
+  padding-left: 1.4rem;
+  color: #3298dc;
+  font-size: 1.3rem;
+}
+
+td {
+  padding: 0.1rem;
+}
+
+.login-section {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+div::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+div::-webkit-scrollbar-track {
+  background: #fafafa; /* color of the tracking area */
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: #3298dc; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #fafafa; /* creates padding around scroll thumb */
+}
+
+.create-account {
+  margin-top: 0.5rem;
 }

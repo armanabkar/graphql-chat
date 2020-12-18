@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useSubscription } from '@apollo/client';
-import { addMessageMutation, messageAddedSubscription, messagesQuery } from './graphql/queries';
+import { addMessageMutation, messageAddedSubscription, messagesQuery } from '../graphql/queries';
 
 export function useChatMessages() {
   const {data} = useQuery(messagesQuery);
