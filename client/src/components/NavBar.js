@@ -3,13 +3,9 @@ import React from "react";
 const NavBar = ({ onLogout, user }) => {
   let greeting;
   const time = new Date().getHours();
-  if (5 < time < 12) {
-    greeting = "Good morning";
-  } else if (12 < time < 18) {
-    greeting = "Good afternoon";
-  } else {
-    greeting = "Good evening";
-  }
+  if (time < 12) greeting = "Good Morning";
+  else if (time >= 12 && time <= 17) greeting = "Good Afternoon";
+  else if (time >= 17 && time <= 24) greeting = "Good Evening";
 
   return (
     <nav className="navbar">
