@@ -4,6 +4,7 @@ type Query {
 
 type Mutation {
   addMessage(input: MessageInput!): Message
+  createUser(input: CreateUserInput!): User
 }
 
 type Subscription {
@@ -12,10 +13,20 @@ type Subscription {
 
 type Message {
   id: ID!
-  from: String 
+  from: String
   text: String
 }
 
 input MessageInput {
   text: String
+}
+
+type User {
+  id: String!
+  password: String!
+}
+
+input CreateUserInput {
+  id: String
+  password: String
 }

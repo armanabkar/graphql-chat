@@ -15,7 +15,7 @@ class MessageList extends Component {
       <div
         ref={this.boxRef}
         className="box"
-        style={{ height: "50vh", overflowY: "scroll" }}
+        style={{ height: "65vh", overflowY: "scroll" }}
       >
         <table>
           <tbody>{messages.map(this.renderMessage.bind(this))}</tbody>
@@ -27,15 +27,19 @@ class MessageList extends Component {
   renderMessage(message) {
     const { user } = this.props;
     let tag = "tag";
+    let messageColor = "";
     if (message.from === user) {
-      tag += " you is-info";
+      tag += " is-info";
+      messageColor += "color";
     }
     return (
       <tr key={message.id}>
         <td>
           <span className={tag}>{message.from}</span>
         </td>
-        <td style={{ paddingLeft: "0.75em" }}>{message.text}</td>
+        <td className={messageColor} style={{ paddingLeft: "0.75em" }}>
+          {message.text}
+        </td>
       </tr>
     );
   }

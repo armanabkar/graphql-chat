@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 export const messagesQuery = gql`
   query MessagesQuery {
@@ -26,6 +26,15 @@ export const messageAddedSubscription = gql`
       id
       from
       text
+    }
+  }
+`;
+
+export const createUserMutation = gql`
+  mutation CreateUserMutation($input: CreateUserInput!) {
+    user: createUser(input: $input) {
+      id
+      password
     }
   }
 `;

@@ -21,7 +21,11 @@ class App extends Component {
   render() {
     const { user } = this.state;
     if (!user) {
-      return <Login onLogin={this.handleLogin.bind(this)} />;
+      return (
+        <ApolloProvider client={client}>
+          <Login onLogin={this.handleLogin.bind(this)} />;
+        </ApolloProvider>
+      );
     }
     return (
       <ApolloProvider client={client}>

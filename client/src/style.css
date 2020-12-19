@@ -21,6 +21,17 @@ a {
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .box {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .login-section {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
 .section {
   padding-top: 1.5rem;
 }
@@ -36,7 +47,7 @@ a {
 }
 
 td {
-  padding: 0.1rem;
+  padding: 0.1rem 0;
 }
 
 .login-section {
@@ -60,4 +71,15 @@ div::-webkit-scrollbar-thumb {
 
 .create-account {
   margin-top: 0.5rem;
+}
+
+.color {
+  color: #3298dc;
+}
+
+.invalid {
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
 }
