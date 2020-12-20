@@ -1,31 +1,14 @@
-import React, { Component } from "react";
+import React, { useEffect, useRef } from "react";
 
-class MessageList extends Component {
-  boxRef = React.createRef();
+const MessageList = ({ messages, user }) => {
+  const boxRef = useRef();
 
-  componentDidUpdate() {
-    const box = this.boxRef.current;
-    // scroll to bottom to make the last message visible
+  useEffect(() => {
+    const box = boxRef.current;
     box.scrollTo(0, box.scrollHeight);
-  }
+  });
 
-  render() {
-    const { messages } = this.props;
-    return (
-      <div
-        ref={this.boxRef}
-        className="box"
-        style={{ height: "65vh", overflowY: "scroll" }}
-      >
-        <table>
-          <tbody>{messages.map(this.renderMessage.bind(this))}</tbody>
-        </table>
-      </div>
-    );
-  }
-
-  renderMessage(message) {
-    const { user } = this.props;
+  const renderMessage = (message) => {
     let tag = "tag";
     let messageColor = "";
     if (message.from === user) {
@@ -42,7 +25,19 @@ class MessageList extends Component {
         </td>
       </tr>
     );
-  }
-}
+  };
+
+  return (
+    <div
+      ref={boxRef}
+      className="box"
+      style={{ height: "65vh", overflowY: "scroll" }}
+    >
+      <table>
+        <tbody>{messages.map(renderMessage)}</tbody>
+      </table>
+    </div>
+  );
+};
 
 export default MessageList;

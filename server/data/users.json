@@ -38,5 +38,9 @@
   {
     "id": "edmond",
     "password": "edmond123"
+  },
+  {
+    "id": "dick",
+    "password": "dick123"
   }
 ]

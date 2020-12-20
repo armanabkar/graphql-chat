@@ -27,7 +27,7 @@ export default function Register({
   };
 
   return (
-    <section className="section login-section">
+    <section className="section box login-section">
       <div className="container">
         <h1 className="title">Register</h1>
         <form>
@@ -66,5 +66,5 @@ export default function Register({
         </form>
       </div>
     </section>
-  );
+  )
 }

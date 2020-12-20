@@ -26,9 +26,17 @@ const Login = ({ onLogin }) => {
   return (
     <div>
       {isRegister ? (
-        <Register setName={setName} setPassword={setPassword} name={name} password={password} onLogin={onLogin} setError={setError} error={error} />
+        <Register
+          setName={setName}
+          setPassword={setPassword}
+          name={name}
+          password={password}
+          onLogin={onLogin}
+          setError={setError}
+          error={error}
+        />
       ) : (
-        <section className="section login-section">
+        <section className="section box login-section">
           <div className="container">
             <h1 className="title">Login</h1>
             <form>
