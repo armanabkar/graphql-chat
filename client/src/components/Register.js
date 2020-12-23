@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useChatMessages } from "../utils/hooks";
 
 export default function Register({
@@ -11,6 +11,7 @@ export default function Register({
   error,
 }) {
   const { createUser } = useChatMessages();
+  const [showTermsBox, setShowTermsBox] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -61,10 +62,40 @@ export default function Register({
               <button className="button is-info" onClick={handleRegisterSubmit}>
                 Login
               </button>
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  defaultChecked={true}
+                  style={{ margin: "0 0.3rem" }}
+                />
+                I agree to the{" "}
+                <a href="/#" onClick={() => setShowTermsBox(!showTermsBox)}>
+                  terms and conditions
+                </a>
+              </label>
             </div>
           </div>
         </form>
+        {showTermsBox && (
+          <div
+            className="box terms-box"
+            style={{ height: "65vh", overflowY: "scroll" }}
+          >
+            <p>
+              1- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Debitis explicabo quam sequi molestiae tempora adipisci repellat
+              fuga assumenda minus necessitatibus, totam, dolor ut, a tenetur
+              veritatis est blanditiis? Voluptatum, laborum?
+            </p>
+            <p>
+              2- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Debitis explicabo quam sequi molestiae tempora adipisci repellat
+              fuga assumenda minus necessitatibus, totam, dolor ut, a tenetur
+              veritatis est blanditiis? Voluptatum, laborum?
+            </p>
+          </div>
+        )}
       </div>
     </section>
-  )
+  );
 }

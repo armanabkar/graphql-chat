@@ -83,3 +83,18 @@ div::-webkit-scrollbar-thumb {
   font-weight: 600;
   font-style: italic;
 }
+
+.checkbox {
+  margin-left: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.terms-box {
+  margin: 1rem auto;
+  max-height: 10rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.terms-box p {
+  margin-bottom: 1rem;
+}
