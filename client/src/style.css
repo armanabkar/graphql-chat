@@ -92,7 +92,7 @@ div::-webkit-scrollbar-thumb {
 .terms-box {
   margin: 1rem auto 0.5rem auto;
   max-height: 10rem;
-  width: 40rem;
+  width: 100%;
   background-color: rgb(248, 248, 248);
 }
 
