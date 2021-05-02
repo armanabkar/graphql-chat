@@ -1,11 +1,6 @@
 # GraphQL Chat Application
 
-> A simple chat app built with React & GraphQL.
-
-<h2 align="center">
-  <img src="./screenshots.gif" alt="graphql-chat" width="600px" />
-  <br>
-</h2>
+A simple chat app built with React & GraphQL.
 
 ## Installation & Usage
 
